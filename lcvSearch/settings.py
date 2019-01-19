@@ -120,6 +120,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# 配置静态文件目录 可以设置多个
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
