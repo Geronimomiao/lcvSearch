@@ -62,7 +62,7 @@
                 </p>
                 <div class="resultList">
                     {% for hit in all_hits %}
-                    <div class="resultItem">
+                        <div class="resultItem">
                             <div class="itemHead">
                                 <a href="{{ hit.url }}"  target="_blank" class="title">{% autoescape off %}{{ hit.title }}{% endautoescape %}</a>
                                 <span class="divsion">-</span>
@@ -170,7 +170,7 @@
 		}
         
     });
-	var key_words = "java"
+	var key_words = $(".searchInput").val()
 	//分页
 	$(".pagination").pagination({{ total_nums }}, {
 		current_page :{{ page|add:'-1' }}, //当前页码
@@ -179,7 +179,7 @@
 		callback :pageselectCallback
 	});
 	function pageselectCallback(page_id, jq) {
-		window.location.href=search_url+'?q='+key_words+'&p='+page_id
+        window.location.href=search_url+'?q='+key_words+'&p='+(page_id+1)
 	}
 	
 	setHeight();
@@ -236,9 +236,7 @@
             //然后再把搜索内容显示出来
             MapSearchArr();
         }
-
         window.location.href=search_url+'?q='+val+"&s_type="+$(".searchItem.current").attr('data-type')
-
     }
 
     function MapSearchArr(){

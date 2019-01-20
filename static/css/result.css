@@ -12,7 +12,7 @@ html{*overflow:auto;}
 .inputArea .advanced{position:absolute;font-size:14px;left:500px;top:12px;width:60px;text-decoration:underline;}
 
 /*分界区域，导航*/
-.nav{margin-bottom:24px;height:31px;background:#f9f9f9;border-bottom:1px solid #e0e0e0;padding:5px 0 0 210px;}
+.nav{height:31px;background:#f9f9f9;border-bottom:1px solid #e0e0e0;padding:5px 0 0 210px;}
 .searchList{float:left;padding-left:5px;}
 .searchList .searchItem{float:left;margin-right:15px;font-size:14px;padding:0 3px 2px 3px;cursor:pointer;height:26px; line-height:26px;}
 .searchList .searchItem.current{color:#0080cc;border-bottom:3px solid #9cc813;font-weight:bold;}
@@ -20,7 +20,7 @@ html{*overflow:auto;}
 #container.sideBarHide .nav{padding-left:35px;}
 
 /*#main区域样式*/
-#main{padding:0 215px 0 182px;}
+#main{padding:0 215px 0 182px; overflow: hidden; position: relative;}
 #main.sideBarHide{padding-left:10px;}
 /*侧边栏搜索条件*/
 .sideBar{position:relative;float:left;margin-left:-182px;width:182px;}
@@ -58,9 +58,9 @@ html{*overflow:auto;}
 .resultArea .resultList{padding-left:30px;}
 .resultArea .resultList .resultItem{margin-bottom:20px;}
 .resultArea .resultList .resultItem{margin-bottom:30px;}
-.resultArea .resultList .itemHead{margin-bottom:5px;color:#767676;} 
-.resultArea .resultList .itemHead .keyWord{color:#d90909;}
-.resultArea .resultList .itemBody .keyWord{color:#d90909;}
+.resultArea .resultList .itemHead{margin-bottom:5px;color:#767676;}
+.resultArea .resultList .itemHead .keyword{color:#d90909;}
+.resultArea .resultList .itemBody .keyword{color:#d90909;}
 .resultArea .resultList .itemHead a.title{font-size:16px;color:#0080cc;text-decoration:underline;}
 .resultArea .resultList .itemHead .value{color:#008000;}
 .resultArea .resultList .itemHead .divsion{margin:0 5px;}
@@ -81,7 +81,12 @@ html{*overflow:auto;}
 .resultArea .searchInResult .inResult{position:absolute;right:-190px;top:8px;font-size:14px;text-decoration:underline;}
 .resultArea .searchInResult .searchButton{left:417px;}
 /*历史搜索区域*/
-.historyArea{float:right;margin-right:-212px;width:212px;}
+.historyArea{
+    width:212px;
+    position: absolute;
+    right: -5px;
+    top: 0;
+}
 .historyArea h6{margin-bottom:10px;font-weight:bold;}
 .historyArea .historyList{margin-bottom:20px;}
 .historyArea .historyList li{margin-bottom:5px;}
